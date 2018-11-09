@@ -17,19 +17,20 @@ document.onkeyup = function (event) {
     // Determines which key was pressed.
     var myChoices = event.key;
 
-    // Randomly chooses a choice from the options array. This is the Computer's guess.
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
     console.log(computerGuess)
-    // Only run the following code block if the user presses "r" or "p" or "s".
-    if (myChoices === "a" || myChoices === "s" || myChoices === "d") {
+    
+    if (myChoices === "a" || myChoices === "s" || myChoices === "d" || myChoices === "f" || myChoices === "g" || myChoices === "h" || myChoices === "j" || myChoices === "k" || myChoices === "l") {
 
-       // $('#lettersguessed').html(letter);
-     
-        var a = $("<div>");  
-          a.text(myChoices);
-          console.log(myChoices);
-         $("#lettersguessed").append(a);
+       
 
+        var b = function () {
+            var a = $("<div>");
+            a.text(myChoices);
+            console.log(myChoices);
+            $("#lettersguessed").append(a);
+        }
+        b();
 
         for (var i = 0; i >= 0; i--) {
             guessScore--;
@@ -40,6 +41,10 @@ document.onkeyup = function (event) {
             }
             if (guessScore === 0) {
                 guessScore = 10;
+                var a = $("<div>");
+
+            
+
             }
 
             if (computerGuess === myChoices) {
