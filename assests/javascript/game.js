@@ -1,6 +1,6 @@
 var computerChoices = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s","d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"];
 //var myChoices = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s","d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"];
-var computerChoices = ["a"];
+
 
 var winsScore = 0;
 var losesScore = 0;
@@ -18,7 +18,7 @@ document.onkeyup = function(event) {
 
     // Randomly chooses a choice from the options array. This is the Computer's guess.
       var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
+        console.log(computerGuess)
     // Only run the following code block if the user presses "r" or "p" or "s".
     if (myChoices === "a") {    
       
@@ -27,12 +27,15 @@ document.onkeyup = function(event) {
             $('#guessleft').html(guessScore);
             if (guessScore == 0){
             losesScore++;
+            $('#loses').html(losesScore);}
             if (guessScore === 0) {
                 guessScore = 10;
             }
-             $('#loses').html(losesScore);}
-             if (computerChoices === myChoices) {
-        winsScore++;  $('#wins').html(winsScore);
+             
+             if (computerGuess === myChoices) {
+                winsScore++;  $('#wins').html(winsScore);
+                guessScore = 10;
+
         }
     
         }
