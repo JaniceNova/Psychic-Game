@@ -39,6 +39,7 @@ var letterGuessWrite = function () {
                 losesScore++;
                 $('#loses').html(losesScore);
                  computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                 $("#lettersguessed").html("");
             }
             if (guessScore === 0) {
                 guessScore = 10;
@@ -52,6 +53,7 @@ var letterGuessWrite = function () {
                 winsScore++; $('#wins').html(winsScore);
                 guessScore = 10;
                 computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                $("#lettersguessed").html("");
 
             }
 
