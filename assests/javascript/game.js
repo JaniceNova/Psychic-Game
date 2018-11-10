@@ -6,7 +6,7 @@ var winsScore = 0;
 var losesScore = 0;
 var guessScore = 10;
 var letter = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"];
-
+var used = [""]
 $('#wins').append(winsScore);
 $('#loses').append(losesScore);
 $('#guessleft').append(guessScore);
@@ -25,7 +25,7 @@ var letterGuessWrite = function () {
    
     console.log(computerGuess)
     
-    if (myChoices === "a" || myChoices === "s" || myChoices === "d" || myChoices === "f" || myChoices === "g" || myChoices === "h" || myChoices === "j" || myChoices === "k" || myChoices === "l") {
+    if (myChoices === "a" || myChoices === "s" || myChoices === "d" || myChoices === "f" || myChoices === "g" || myChoices === "h" || myChoices === "j" || myChoices === "k" || myChoices === "l" || myChoices === "q" || myChoices === "w" || myChoices === "e" || myChoices === "r" || myChoices === "t" || myChoices === "y" || myChoices === "u" || myChoices === "i" || myChoices === "o" || myChoices === "p" || myChoices === "z" || myChoices === "x" || myChoices === "c" || myChoices === "v" || myChoices === "b" || myChoices === "n" || myChoices === "m") {
 
        
 
